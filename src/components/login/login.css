@@ -1,0 +1,159 @@
+#link {
+  color: white;
+}
+
+#signup__logo {
+  width: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+  .form__first {
+    padding-top: 30% !important;
+  }
+
+  .form__first__img {
+    width: 20% !important;
+    margin-bottom: 8% !important;
+  }
+
+  .form__first__h3 {
+    display: none;
+  }
+  .form__second {
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-top: 40%;
+    height: 100vh;
+  }
+
+  .signup__form {
+    display: inherit !important;
+    margin-left: 15%;
+  }
+  
+  .signup__col__one {
+    width: 80% !important;
+  }
+  
+  .signup__col__two {
+    width: 80% !important;
+  }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .form__first {
+    padding-top: 10% !important;
+  }
+
+  .form__first__img {
+    width: 20% !important;
+    margin-bottom: 8% !important;
+  }
+
+  .form__first__h3 {
+    display: none;
+  }
+  .form__second {
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-top: 5% !important;
+    height: 100vh;
+  }
+
+  .signup__form {
+    display: inherit !important;
+    margin-left: 15%;
+  }
+  
+  .signup__col__one {
+    width: 80% !important;
+  }
+  
+  .signup__col__two {
+    width: 80% !important;
+  }
+
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .form__first {
+    padding-top: 20% !important;
+  }
+
+  .form__first__img {
+    width: 10% !important;
+    margin-bottom: 2% !important;
+  }
+
+  .form__first__h3 {
+    display: none;
+  }
+  .form__second {
+    width: 80% !important;
+    margin-left: 10% !important;
+    margin-top: 5% !important;
+    height: 100vh;
+  }
+}
+
+.form__first__img {
+  width: 8%;
+  height: 8%;
+}
+
+.login__form {
+  background-color: #03256C;
+  height: 100%;
+  width: 100vw;
+  color: white;
+}
+
+.form__first {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.form__first__h3{
+  color: white !important;
+  font-size: 3rem;
+  margin-top: 2%;
+}
+
+
+.form__second {
+  width: 35%;
+  margin-left: 35%;
+  margin-top: 5%;
+  padding-bottom: 20%;
+}
+
+.form__links {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.signup__form{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 2%;
+  margin-bottom: 10%;
+}
+
+.signup__col__one {
+  width: 35%;
+}
+
+.signup__col__two {
+  width: 30%;
+}
+
+.signup__button {
+  margin-left: 79%;
+}
+

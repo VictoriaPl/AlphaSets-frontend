@@ -32,7 +32,7 @@ class Login extends Component {
       .login(form)
       .then(response=>{
         if (response.err) return toastr.error(response.err)
-        this.props.history.push('/marketplace')
+        this.props.history.push(`/profile/${response._id}`)
         toastr.success('Successful login')
         window.localStorage.setItem('loggedUser', JSON.stringify(response.data))
       })

@@ -20,6 +20,12 @@ class AddDataService {
       .then(({data}) => data)
       .catch(err => err)
   }
+  getDetail = () => {
+    return this.service
+    .get('/detail')
+    .then(({detail}) => detail)
+    .catch(err => err)
+  }
 }
 
 export default AddDataService

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import logo from '../../assets/logo.png'
 import { Link } from 'react-router-dom'
 import AddDataService from '../../services/data'
-import styles from './marketplace.module.css'
+//import styles from './marketplace.module.css'
 
 class Marketplace extends Component {
   state={
@@ -11,16 +11,25 @@ class Marketplace extends Component {
   }
   componentDidMount(){
     const service = new AddDataService()
-    service.getData()
-      .then(alldata => {
-        this.setState({data: alldata})
-      })
+    service.getDetail()
+    .then(oneData => {
+      console.log(oneData)
+      const id = this.props.match.params.id
+      console.log(id)
+      const allData = oneData
+      allData.filter(data => {
+      if( data._id === id ) {
+      data = data._id 
+      }
+      this.setState({user: allData})
+    })
+   })
   }
 
   render() {
     const data = this.state.data
     return (
-      <div className={styles.marketplace}>
+      <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <a className="navbar-brand ml-3" href='/'>
             <img src={logo} width="40" height="35" alt="logo"/>
@@ -31,8 +40,8 @@ class Marketplace extends Component {
           </div>
         </nav>
         <div className="row">
-          <h1 className={styles.marketplaceH1}>MARKETPLACE</h1>  
-          <Link to="/addData" id={styles.marketplaceBtn}>Add data</Link>
+          <h1>DETAIL</h1>  
+          <Link to="/buyData" >Buy data</Link>
         </div>
         {data.map((oneData, i) => {
         return(
@@ -58,5 +67,4 @@ class Marketplace extends Component {
 export default Marketplace
 
 //className={styles.}
-
 

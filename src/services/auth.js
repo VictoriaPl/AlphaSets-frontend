@@ -18,12 +18,17 @@ class AuthService {
     return this.service
       .post('/login', form)
       .then(response => {
-        console.log(response)
-        return response
+        return response.data
       })
       .catch(err => {
         return { err: 'Incorrect password' }
       })
+  }
+  getProfile = () => {
+    return this.service
+    .get('/profile')
+    .then(user => user)
+    .catch(err => err)
   }
 }
 

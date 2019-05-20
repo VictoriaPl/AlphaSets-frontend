@@ -37,7 +37,9 @@ function DataForm({ handleInputs, handleSubmit, handleOnChange, uploadValue }) {
         <option value="RDF">RDF</option>
       </select>
       <br/>
-      <progress value={uploadValue} max='100'></progress>
+      <div className="progress">
+        <div className="progress-bar progress-bar-striped progress-bar-animated" value={uploadValue} role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style={{width: "0%"}}/> 
+      </div>
       <br/>
       <input type="file" onChange={handleOnChange}/>
       <br/><br/>

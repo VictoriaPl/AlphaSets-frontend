@@ -1,0 +1,30 @@
+#formDiv {
+  background-color: #03256C;
+  color: white;
+}
+
+.formWidth {
+  width: 50%;
+  margin-left: 25%;
+  color: white;
+  font-size: 20px;
+}
+
+.formH1 {
+  width: 50%;
+  margin-left: 42%;
+  color: white;
+}
+
+.dataComp {
+  margin: 5% 0%;
+}
+
+.addDataBtn {
+  color: black;
+  background-color: rgb(220, 162, 47);
+  border-radius: 5%;
+  border-color: rgb(220, 162, 47);
+  margin-bottom: 10%;
+  margin-left: 40%;
+}

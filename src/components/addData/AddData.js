@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import DataForm from './dataFrom'
+import DataForm from './dataForm'
 import AddDataService from '../../services/data'
 import toastr from 'toastr'
 import firebase from 'firebase'
@@ -27,7 +27,8 @@ class AddData extends Component {
       value: '',
       type: 'rawData',
       industry: '',
-      timeFrame: '',
+      timeFrameFrom: '',
+      timeFrameTo: '',
       source: '',
       format: 'CSV',
       license: '',

@@ -23,7 +23,7 @@ class AddDataService {
   getDetail = () => {
     return this.service
     .get('/detail')
-    .then(({detail}) => detail)
+    .then(detail => detail)
     .catch(err => err)
   }
 }

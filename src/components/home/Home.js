@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import logo from '../../assets/logo.png'
 import buyImage from '../../assets/buy.png'
 import '../../App.css'
+import logo from '../../assets/logo.png'
 
 class Home extends React.Component {
   render() {
@@ -14,13 +14,13 @@ class Home extends React.Component {
             <img src={logo} width="40" height="35" alt="logo"/>
           </a>
           <div className="ml-auto">
-            <Link id="btn__link" to="/login"><button className="btn btn-md btn-outline-light mr-sm-2" id="nav__button" type="button">Login</button></Link>
-            <Link id="btn__link" to="/signup"><button className="btn btn-md btn-outline-light nav__button" type="button">Signup</button></Link>
+            <button className="btn btn-md btn-outline-light mr-sm-2" type="button"><Link id="link" to="/login">Login</Link></button>
+            <button className="btn btn-md btn-outline-light" type="button"><Link id="link" to="/signup">Signup</Link></button>
           </div>
         </nav>
         <section className="section__first">
           <div className="col-md section__first__div">
-            <p className="section__first__p">Wellcome to ALPHA SETS,  <br/> Buy and Sell data in a safe way.</p>
+            <p className="section__first__p">Welcome to ALPHA SETS,  <br/> Buy and Sell data in a safe way.</p>
             <Link id="btn__mrkt" to="/marketplace"><button className="section__first__button" type="button">View the Marketplace</button></Link>
           </div>
           <div className="col-md section__second">
@@ -74,7 +74,7 @@ class Home extends React.Component {
             <h5>Alpha Selts</h5>
             <ul>
               <li className="section2__first__li"><Link id="footer_links" to="/marketplace">Marketplace</Link></li>
-              <li className="section2__first__li"><Link id="footer_links" to="/">Security and privacy</Link></li>
+              <li className="section2__first__li"><Link id="footer_links" to="/security">Security and privacy</Link></li>
               <li className="section2__first__li"><Link id="footer_links" to="/login">Log in</Link></li>
             </ul>
           </div>
@@ -83,7 +83,7 @@ class Home extends React.Component {
             <ul>
               <li className="section2__first__li"><Link id="footer_links" to="/">About Aplha Sets</Link></li>
               <li className="section2__first__li"><Link id="footer_links" to="/signup">Join us</Link></li>
-              <li className="section2__first__li"><Link id="footer_links" to="/">Contact</Link></li>
+              <li className="section2__first__li"><Link id="footer_links" to="/contact">Contact</Link></li>
             </ul>
           </div>
           <p className="footer__p">@2019 Alpha Sets. All rights included.</p>

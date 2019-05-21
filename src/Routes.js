@@ -7,16 +7,24 @@ import Marketplace from './components/marketplace/Marketplace'
 import AddData from './components/addData/AddData'
 import Profile from './components/profile/Profile'
 import Detail from './components/detailData/Detail'
+import Contact from './components/home/Contact'
+import Securiy from './components/home/Security'
+import MarketplaceID from './components/marketplace/MarketplaceID'
+import Download from './components/buyData/Download';
 
-const Router = () => (
+const Router = ({getTheUser}) => (
   <Switch>
     <Route exact path="/" component={Home} />
-    <Route exact path="/signup" component={Signup} />
+    <Route exact path='/signup' render={() => <Signup getTheUser={getTheUser}/>}/>
     <Route exact path="/login" component={Login} />
     <Route exact path="/marketplace" component={Marketplace}/>
-    <Route exact path="/addData" component={AddData}/>
+    <Route exact path="/addData/:id" component={AddData}/>
     <Route exact path="/profile/:id" component={Profile}/>
     <Route exact path="/detail/:id" component={Detail}/>
+    <Route exact path="/contact" component={Contact}/>
+    <Route exact path="/security" component={Securiy}/>
+    <Route exact path="/marketplace/:id" component={MarketplaceID}/>
+    <Route exact path="/dowload/:id" component={Download}/>
   </Switch>
 )
 

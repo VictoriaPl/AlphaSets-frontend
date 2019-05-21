@@ -7,8 +7,7 @@ function LoginForm({ handleInputs, handleSubmit }) {
   return (
     <div className="login__form">
       <div className="form__first">
-        <img className="form__first__img" src={logo} alt="logo"/>
-        <h1 className="form__first__h3"><Link id="link" to="/">SETS</Link></h1>
+        <Link to="/" className="form__first__img"><img src={logo} alt="logo"/></Link>
       </div>
       <div className="form__second">
         <div className="form-group form__email">
@@ -21,7 +20,6 @@ function LoginForm({ handleInputs, handleSubmit }) {
         </div>
         <input type="submit" className="btn btn-warning" value="Login" onClick={handleSubmit}/>
         <div className="form__links">
-          <Link to="/" className="form-text text-muted">Forgot your password?</Link>
           <Link to="/signup" className="form-text text-muted">New here? Create an account.</Link>
         </div>
       </div>

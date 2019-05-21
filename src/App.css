@@ -49,6 +49,19 @@ a {
   border-radius: 0.5em;
 }
 
+.profile__btn {
+  background-color: #FFC857;
+  color: black!important;
+  border: none;
+  font-size: 20px;
+  width: 40%;
+  margin-top: 2%;
+  border-radius: 0.5em;
+  height: 40px;
+  margin-bottom: 2%;
+  margin-left: 25%;
+}
+
 .section__second {
   margin: 5%;
 }
@@ -165,3 +178,4 @@ a {
 .footer__p {
   margin-top: 19%;
 }
+

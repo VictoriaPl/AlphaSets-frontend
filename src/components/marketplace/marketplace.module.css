@@ -3,29 +3,30 @@
 }
 
 .marketplace {
-  background-color: #EAEDF2;
+  background-color: #03256C;
   padding-bottom: 10%;
 }
 
 .marketplaceH1 {
   margin-left: 20.5%;
   margin-top: 2%;
+  color: white;
 }
 
 #marketplaceBtn {
-  margin-left: 35%;
+  margin-left: 23%;
   margin-top: 2.2%;
+  margin-right: 10%;
   margin-bottom: 2%;
-  color: white; 
-  border: 2px lightslategrey solid;
+  color: black; 
+  border: 2px #FFC857 solid;
   font-size: 20px;
   padding: 0.5% 1%;
   border-radius: 2%;
-  background-color: lightslategrey;
+  background-color: #FFC857;
 }
 
 #dataCard {
   text-decoration: none;
   color: black;
 }
-

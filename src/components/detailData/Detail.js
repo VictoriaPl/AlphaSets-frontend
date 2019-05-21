@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import logo from '../../assets/logo.png'
-import { Link } from 'react-router-dom'
 import AddDataService from '../../services/data'
 import styles from '../marketplace/marketplace.module.css'
 import PaypalButton from '../buyData/PayPalButton';
@@ -28,7 +26,11 @@ class Detail extends Component {
       const allData = oneData.data
       allData.filter(data => {
       if( data._id === id ) {
-      this.setState({data: data})
+        return(
+          this.setState({data: data})
+        )
+      } else {
+        return 'Error'
       }
     })
    })
@@ -47,18 +49,9 @@ class Detail extends Component {
     const data = this.state.data
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand ml-3" href='/'>
-            <img src={logo} width="40" height="35" alt="logo"/>
-          </a>
-          <div className="ml-auto">
-            <button className="btn btn-md btn-outline-light mr-sm-2" type="button"><Link id="link" to="/login">Login</Link></button>
-            <button className="btn btn-md btn-outline-light" type="button"><Link id="link" to="/signup">Signup</Link></button>
-          </div>
-        </nav>
         <div className={styles.marketplace}>
-          <h1 style={{marginLeft: '15.5%', paddingTop: '2%'}}>DATA DETAIL</h1>  
-          <div key={data._id} className="card mb-3 mt-3" style={{maxWidth: '940px', marginLeft: '15%'}}>
+          <h1 style={{marginLeft: '20.2%', paddingTop: '2%', color: 'white'}}>DATA DETAIL</h1>  
+          <div key={data._id} className="card mb-3 mt-3" style={{maxWidth: '840px', marginLeft: '20%'}}>
             <div className="row no-gutters">
               <div className="col-md-15">
                 <div className="card-body"> 
@@ -85,7 +78,7 @@ class Detail extends Component {
               </div>
             </div>
           <div style={{marginLeft: '40%', width: "20%"}}>
-          <PaypalButton 
+          <PaypalButton {...this.props}
           client={CLIENT}
           env={ENV}
           commit={true}

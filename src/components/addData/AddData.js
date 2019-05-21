@@ -50,7 +50,8 @@ class AddData extends Component {
       .addData(data)
       .then(response=>{
         if (response.err) return toastr.error(response.err)
-        this.props.history.push('/marketplace')
+        const {id} = this.props.match.params
+        this.props.history.push(`/marketplace/${id}`)
         toastr.success('Success!')
       })
       .catch(err => {

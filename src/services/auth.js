@@ -1,6 +1,7 @@
 import axios from 'axios'
 const baseURL = 'http://localhost:3000/auth'
 
+
 class AuthService {
   constructor() {
     this.service = axios.create({
@@ -24,10 +25,22 @@ class AuthService {
         return { err: 'Incorrect password' }
       })
   }
+  logout = () => {
+    return this.service
+    .get('/logout')
+    .then(res => res)
+    .catch(err => err)
+  }
   getProfile = () => {
     return this.service
     .get('/profile')
     .then(user => user)
+    .catch(err => err)
+  }
+  loggedin = () => {
+    return this.service
+    .get('/loggedin')
+    .then(response => response)
     .catch(err => err)
   }
 }

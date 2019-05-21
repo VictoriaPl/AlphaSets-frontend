@@ -1,0 +1,21 @@
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+class Security extends React.Component {
+  render () {
+    return(
+      <div>
+        <div>
+         <h1>SECURITY & PRIVACY</h1>
+         <h2>Personal data collected by Alpha Sets on the Site</h2>
+         <p>1. When a Member applies to create an account on the Alpha Sets site, Alpha Sets collects information from the applicant, notably their last name, first name, e-mail address, password, and telephone number, ein, company, job title, website and company description. All data is required, as indicated on the online data collection forms. To help reinforce trust between users, Alpha Sets offers the possibility to verify Member identity through authentication, that will be ensured by the website administrator. The potential Member accepts to grant Alpha Sets access to all the information contained in his/her profile. The Member also authorizes Alpha Sets to store that information. The data collected is needed to create the account, use the Site’s functionalities, conclude Transactions between Clients, and manage the relationship between Alpha Sets and the Client. The data is therefore collected for a legitimate purpose, for both ALpha Sets and the Client. Member identification data is brought to the attention of other Members so that they may communicate with each other, under their full responsibility.This data is stored by Dawex as long as the Member’s account remains active.The data is then archived for legal purposes and for the duration necessary to handle any disputes involving a Client.However, the Member’s last name, first name, and messages shall continue to be displayed in the accounts of Active Members with whom exchanges were made.Dawex may transmit Members’ identification data to the payment platform for the proper execution of Transactions.Dawex may also transmit collected personal Data to the duly authorized administrative or judiciary authorities.</p>
+         <p>2. When a Member browses and uses Platform functionalities, Dawex also collects information about the Member’s IP address, connection and navigation data, the offerings consulted, and the history of Transactions carried out for a Client by the Member, as well as the operations and exchanges that led to those Transactions, in order to:Compile statistics regarding visits to the Site and use of the Site.Improve the Client experience.Secure Transactions carried out via its Service and determine the level of fraud risk associated with each Transaction. With that intent, Dawex reserves the right to consult with service providers specializing in risk prevention.Ensure that the Platform is not subject to use that is abusive or contrary to Dawex General Terms and Conditions.This data is stored in an anonymized form when a Member’s account becomes inactive.The data is also archived for legal purposes and for the duration necessary to handle any disputes involving a Client.Given the nature and purposes of the processing described above, Dawex’s legitimate interest is considered as being the legal basis for this processing operation.</p>
+         <p>3. Dawex may use Members’ email addresses and/or telephone numbers to send them information for Clients, relating to Dawex services. This information is adapted according to the Client’s profile.The Member may, at any time, oppose receiving this information by using an unsubscribe link or by configuring preferences in his/her account.Consent is the legal basis for this processing.</p>
+         <p>4. Dawex also establishes statistics regarding Site visits (number of pages visited, frequency, etc.). These statistics are stored for a duration of 3 (three) years. This processing is carried out in accordance with Dawex’s legitimate interest.When used to subscribe to the Dawex newsletter, the email address of the registered person is collected and kept until the person unsubscribes. It is possible to unsubscribe from the Dawex newsletter at any time. After unsubscription, the associated e-mail address is deleted unless it is kept for other purposes, in particular if it is a Member’s email address.Consent is the legal basis for this processing.</p>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default Security

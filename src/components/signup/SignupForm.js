@@ -43,7 +43,6 @@ class SignupForm extends React.Component {
     <div className="login__form">
       <div className="form__first">
         <Link  to="/"><img id="signup__logo" src={logo} alt="logo"/></Link>
-        <h3 className="form__first__h3"><Link id="link" to="/">SETS</Link></h3>
       </div>
       <form onSubmit={this.handleSubmit}>
         <div className="signup__form">

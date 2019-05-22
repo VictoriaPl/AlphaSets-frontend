@@ -9,6 +9,7 @@ import Logout from '../login/Logout.js'
 class Marketplace extends Component {
   state={
     data: [],
+    f: ''
   }
   componentDidMount(){
     const service = new AddDataService()
@@ -18,8 +19,18 @@ class Marketplace extends Component {
       })
   }
 
+  handleInput = e => {
+    this.setState({f: e.target.value})
+  }
+
+  search = f => {
+    return function(d) {
+      return d.industry.toLowerCase().includes(f.toLowerCase()) || !f
+    }
+  }
+
   render() {
-    const data = this.state.data
+    const {data, f} = this.state
     const {id} = this.props.match.params
     return (
       <div className={styles.marketplace}>
@@ -36,17 +47,27 @@ class Marketplace extends Component {
           <h1 className={styles.marketplaceH1}>MARKETPLACE</h1>  
           <Link to={`/addData/${id}`} id={styles.marketplaceBtn}>Add data</Link>
         </div>
-        {data.map((oneData, i) => {
+        <div className="row" style={{marginLeft: '18.5%', width: '100%'}}>
+          <div className="col-md-4 col-md-offset-3">
+            <form action="" className="search-form">
+                <div className="form-group has-feedback">
+            		  <label className="sr-only">Search</label>
+            	  	<input type="text" className="form-control" name="search" id="search" placeholder="search" onChange={this.handleInput} value={f}/>
+            	  </div>
+            </form>
+          </div>
+        </div>
+        {data.filter(this.search(f)).map((oneData, i) => {
         return(
           <div key={i} className="card mb-3 mt-3" style={{maxWidth: '740px', marginLeft: '20%', backgroundColor: 'white'}}>
             <div className="row no-gutters">
               <div className="col-md-15">
-                <Link id={styles.dataCard} to={`/detail/${oneData._id}`}><div className="card-body"> 
+                <div id={styles.dataCard} className="card-body"> 
                   <h5 className="card-title">{oneData.name}</h5>
                   <p className="card-text">{oneData.description}</p>
                   <p className="card-text"><small className="text-muted">{oneData.format}</small></p>
                   <p className="card-text">{oneData.value}$</p>
-                </div></Link>
+                </div>
               </div>
             </div>
           </div>

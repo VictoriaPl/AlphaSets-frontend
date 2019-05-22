@@ -5,10 +5,11 @@ import AddDataService from '../../services/data'
 import styles from './marketplace.module.css'
 import logo from '../../assets/logo.png'
 
+
 class Marketplace extends Component {
   state={
     data: [],
-    filtered : []
+    f: ''
   }
   componentDidMount(){
     const service = new AddDataService()
@@ -17,9 +18,19 @@ class Marketplace extends Component {
         this.setState({data: alldata})
       })
   }
+  
+  handleInput = e => {
+    this.setState({f: e.target.value})
+  }
+
+  search = f => {
+    return function(d) {
+      return d.industry.toLowerCase().includes(f.toLowerCase()) || !f
+    }
+  }
 
   render() {
-    const data = this.state.data
+    const {data, f} = this.state
     return (
       <div className={styles.marketplace}>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -34,18 +45,17 @@ class Marketplace extends Component {
         <div className="row">
           <h1 className={styles.marketplaceH1}>MARKETPLACE</h1>  
         </div>
-        {/* <div className="row" style={{marginLeft: '18.5%', width: '100%'}}>
+        <div className="row" style={{marginLeft: '18.5%', width: '100%'}}>
           <div className="col-md-4 col-md-offset-3">
             <form action="" className="search-form">
                 <div className="form-group has-feedback">
-            		  <label for="search" className="sr-only">Search</label>
-            	  	<input type="text" className="form-control" name="search" id="search" placeholder="search"/>
-              		<span className="glyphicon glyphicon-search form-control-feedback"></span>
+            		  <label className="sr-only">Search</label>
+            	  	<input type="text" className="form-control" name="search" id="search" placeholder="search" onChange={this.handleInput} value={f}/>
             	  </div>
             </form>
           </div>
-        </div> */}
-        {data.map((oneData, i) => {
+        </div>
+        {data.filter(this.search(f)).map((oneData, i) => {
         return(
           <div key={i} className="card mb-3 mt-3" style={{maxWidth: '740px', marginLeft: '20%', backgroundColor: 'white'}}>
             <div className="row no-gutters">

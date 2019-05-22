@@ -24,7 +24,7 @@ const Router = ({getTheUser}) => (
     <Route exact path="/contact" component={Contact}/>
     <Route exact path="/security" component={Securiy}/>
     <Route exact path="/marketplace/:id" component={MarketplaceID}/>
-    <Route exact path="/dowload/:id" component={Download}/>
+    <Route exact path="/download/:id" component={Download}/>
   </Switch>
 )
 

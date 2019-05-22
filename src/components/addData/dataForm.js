@@ -57,6 +57,10 @@ function DataForm({ handleInputs, handleSubmit, handleOnChange, uploadValue }) {
             <option value="RDF">RDF</option>
           </select>
         </div>
+        <div className={styles.dataComp}>
+          <label>File name:</label>
+          <input className="form-control" type="text" name="fileName" onChange={handleInputs} />
+        </div>
         <br/>
         <div className="progress">
           <div className="progress-bar progress-bar-striped progress-bar-animated" value={uploadValue} role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style={{width: "0%"}}/> 

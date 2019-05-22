@@ -25,16 +25,18 @@ class PayPalButton extends Component{
                 }
               }
             ]
-          });
+          })
         },
         onApprove: (data, actions) => {
-          return actions.order.capture().then(function(details) {
+          actions.order.capture()
+          .then((details) =>  {
             const {id} = this.props.match.params
-            this.props.history.push(`/download/${id}`);
-          });
+            this.props.history.push(`/download/${id}`)
+          })
+          .catch(e => e)
         }
       })
-      .render(this.buttonRef.current);
+      .render(this.buttonRef.current)
     }
   }
 

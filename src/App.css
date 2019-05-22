@@ -179,3 +179,27 @@ a {
   margin-top: 19%;
 }
 
+.download {
+  background-color: #03256C;
+  height: 100vw;
+}
+
+.download__logo {
+  margin-left: 35%;
+}
+
+.download__link {
+  color: 'white'!important;
+  margin-left: '50%' 
+}
+
+.download__mkt {
+  background-color: #FFC857;
+  color: black!important;
+  border: none;
+  font-size: 20px;
+  width: 60%;
+  margin-left: 37%;
+  border-radius: 5em;
+  padding: 1% 2%;
+}

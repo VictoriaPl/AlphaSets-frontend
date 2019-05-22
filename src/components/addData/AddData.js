@@ -32,6 +32,7 @@ class AddData extends Component {
       source: '',
       format: 'CSV',
       license: '',
+      fileName: '',
       uploadValue: 0
     }
   }

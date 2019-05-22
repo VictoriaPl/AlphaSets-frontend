@@ -78,7 +78,7 @@ class Detail extends Component {
               </div>
             </div>
           <div style={{marginLeft: '40%', width: "20%"}}>
-          <PaypalButton {...this.props}
+          <PaypalButton
           client={CLIENT}
           env={ENV}
           commit={true}

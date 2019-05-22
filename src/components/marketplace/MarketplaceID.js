@@ -59,7 +59,7 @@ class Marketplace extends Component {
         </div>
         {data.filter(this.search(f)).map((oneData, i) => {
         return(
-          <div key={i} className="card mb-3 mt-3" style={{maxWidth: '740px', marginLeft: '20%', backgroundColor: 'white'}}>
+          <Link to={`/detail/${oneData._id}`}><div key={i} className="card mb-3 mt-3" style={{maxWidth: '740px', marginLeft: '20%', backgroundColor: 'white'}}>
             <div className="row no-gutters">
               <div className="col-md-15">
                 <div id={styles.dataCard} className="card-body"> 
@@ -70,7 +70,7 @@ class Marketplace extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div></Link>
           )
        })}
       </div>

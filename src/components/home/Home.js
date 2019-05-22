@@ -14,7 +14,7 @@ class Home extends React.Component {
             <img src={logo} width="40" height="35" alt="logo"/>
           </a>
           <div className="ml-auto">
-            <button className="btn btn-md btn-outline-light mr-sm-2" type="button"><Link id="link" to="/login">Login</Link></button>
+            <button className="btn btn-md btn-outline-light mr-sm-2 login__btn__home" type="button"><Link id="link" to="/login">Login</Link></button>
             <button className="btn btn-md btn-outline-light" type="button"><Link id="link" to="/signup">Signup</Link></button>
           </div>
         </nav>
@@ -31,7 +31,7 @@ class Home extends React.Component {
           <div className="col-md ml-5 mb-5">
             <h3 className="section2__first__h3" >WHY ALPHA SETS?</h3>
             <ul className="list-group section2__first__ul">
-              <li className="section2__first__li"><i className="fas fa-lock"></i>  Safe data storage and transfer</li>
+              <li className="section2__first__li"><i className="fas fa-lock" ></i>  Safe data storage and transfer</li>
               <li className="section2__first__li"><i className="fas fa-hand-holding-usd"></i>  Easy to buy and easy to sell platform</li>
               <li className="section2__first__li"><i className="fas fa-database"></i>  Only open dataset marketplace</li>
             </ul>
@@ -70,21 +70,14 @@ class Home extends React.Component {
           </div>
         </section>
         <section className="section4">
-          <div className="col-md">
-            <h5>Alpha Selts</h5>
-            <ul>
-              <li className="section2__first__li"><Link id="footer_links" to="/marketplace">Marketplace</Link></li>
-              <li className="section2__first__li"><Link id="footer_links" to="/security">Security and privacy</Link></li>
-              <li className="section2__first__li"><Link id="footer_links" to="/login">Log in</Link></li>
-            </ul>
-          </div>
-          <div className="col-md">
-            <h5>About us</h5>
-            <ul>
-              <li className="section2__first__li"><Link id="footer_links" to="/">About Aplha Sets</Link></li>
-              <li className="section2__first__li"><Link id="footer_links" to="/signup">Join us</Link></li>
-              <li className="section2__first__li"><Link id="footer_links" to="/contact">Contact</Link></li>
-            </ul>
+          <div className="footer__links">
+              <ul className="row">
+                <li className="section4__first__li col-md"><Link id="footer_links" to="/marketplace">|Marketplace</Link></li>
+                <li className="section4__first__li col-md"><Link id="footer_links" to="/security">| Security and privacy</Link></li>
+                <li className="section4__first__li col-md"><Link id="footer_links" to="/login">| Log in</Link></li>
+                <li className="section4__first__li col-md"><Link id="footer_links" to="/signup">| Join us</Link></li>
+                <li className="section4__first__li col-md"><Link id="footer_links" to="/contact">| Contact</Link></li>
+              </ul>
           </div>
           <p className="footer__p">@2019 Alpha Sets. All rights included.</p>
         </section>

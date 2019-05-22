@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import scriptLoader from 'react-async-script-loader';
 import { withRouter } from "react-router-dom";
+
 class PayPalButton extends Component{
+
   constructor(props){
     super(props)
 
@@ -48,6 +50,6 @@ class PayPalButton extends Component{
 
 }
 
-const src = scriptLoader(`https://www.paypal.com/sdk/js?client-id=AUos8ry8Ki3xe8_8gyB5ndX_4qQCiGRxPVmpMGegm_nSibfC146tm4ZU04no-TlVBlX0TpPguxWhpdlK`)(PayPalButton)
+const src = scriptLoader(`https://www.paypal.com/sdk/js?client-id=AfKIhHmFj4aWfCk9zX34Tf2Rv3LZO2eXJquF7GnKgy-zvTNazCTzHNIKgVnj9pEzpjYlruwq9E680wN9`)(PayPalButton)
 
 export default withRouter(src)

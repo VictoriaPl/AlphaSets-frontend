@@ -55,9 +55,7 @@ class AddData extends Component {
         this.props.history.push(`/marketplace/${id}`)
         toastr.success('Success!')
       })
-      .catch(err => {
-        console.log(err)
-      })
+      .catch(err => err)
   }
 
 

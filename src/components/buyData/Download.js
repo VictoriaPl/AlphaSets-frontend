@@ -36,7 +36,14 @@ class Download extends Component {
       let fileRef = storage.ref(`dataFiles/${this.state.data.fileName}`)
       fileRef.getDownloadURL()
       .then(url => {
-        this.setState({url: url})
+        var xhr = new XMLHttpRequest()
+        xhr.responseType = 'blob'
+        xhr.onload = e => {
+          const blob = xhr.response
+          this.setState({url: window.URL.createObjectURL(blob)})
+        }
+        xhr.open('GET', url)
+        xhr.send()
       })
       .catch(err => err)
      })
@@ -48,7 +55,14 @@ class Download extends Component {
     let fileRef = storage.ref(`dataFiles/${this.state.data.fileName}`)
     fileRef.getDownloadURL()
     .then(url => {
-      this.setState({url: url})
+      var xhr = new XMLHttpRequest()
+      xhr.responseType = 'blob'
+      xhr.onload = e => {
+        const blob = xhr.response
+        this.setState({url: window.URL.createObjectURL(blob)})
+      }
+      xhr.open('GET', url)
+      xhr.send()
     })
     .catch(err => err)
   }
@@ -63,9 +77,9 @@ class Download extends Component {
           <Link to='/' className="ml-2 mt-3"><h2 style={{color: 'white', fontSize: '60px'}}>SETS</h2></Link>
         </div>
         <h1 style={{color: 'white', marginLeft: '30%', marginBottom: '5%'}}>Thanks for your purchase</h1>
-        {file ? <a href={file} target="_blank" rel="noopener noreferrer" style={{color: 'white', marginLeft:  '43%', padding: '1% 5%', backgroundColor: '#26b6b2', border: 'none', borderRadius: '5%'}}>LINK</a> : <div></div> }
-        <a><h5 style={{color: '#DBDBDB', marginLeft: '25%', marginTop: '2%', marginBottom: '2%'}} onClick={this.handleDownload}>If your link doesn't appears here immediately, click here to download.</h5></a>
-        <Link to={`/marketplace/${id}`} className="download__mkt">Go back to the marketplace</Link>
+        {file ? <a href={file} target="_blank" download rel="noopener noreferrer" style={{color: 'white', marginLeft:  '43%', padding: '1% 5%', backgroundColor: '#26b6b2', border: 'none', borderRadius: '5%'}}>DOWNLOAD LINK</a> : <div></div> }
+        <a onClick={this.handleDownload} download target="_blank" rel="noopener noreferrer"><h5 style={{color: '#DBDBDB', marginLeft: '25%', marginTop: '2%', marginBottom: '2%'}} >If your link doesn't appears here immediately, click here to download.</h5></a>
+        <Link download to={`/marketplace/${id}`} className="download__mkt">Go back to the marketplace</Link>
       </div>
     )
   }

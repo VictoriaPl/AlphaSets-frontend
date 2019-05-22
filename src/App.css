@@ -169,14 +169,21 @@ a {
 
 .section4 {
   background-color: #DBDBDB;
-  padding: 5%;
+  padding: 1%;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
+}
+
+.section4__first__li {
+  list-style: none;
+  line-height: 2rem;
+}
+
+.footer__links {
+  padding-left: 5%;
 }
 
 .footer__p {
-  margin-top: 19%;
+  text-align: center;
 }
 
 .download {
@@ -202,4 +209,61 @@ a {
   margin-left: 37%;
   border-radius: 5em;
   padding: 1% 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  .section__first__div {
+    font-size: 2rem;
+    margin-bottom: 5%;
+  }
+
+  .section2 {
+    margin: 5%;
+  }
+  
+  .section2__first__h3{
+    font-size: 1.8rem;
+  }
+  
+  .section2__first__ul {
+    font-size: 1.2rem;
+  }
+  
+  .section2__first__li {
+    line-height: 2.2rem;
+  }
+
+  .section3 {
+    padding: 5%;
+  }
+
+  .div__buy {
+    margin-bottom: 2%;
+  }
+
+  .section3__first__ul {
+    margin-top: 1%; 
+  }
+
+  .section3__li {
+    font-size: 1.2rem;
+  }
+
+  .section3__img {
+    margin-top: 0%;
+  }
+
+  .section3__img__2 {
+    margin-top: 0%;
+    margin-bottom: 2%;
+  }
+
+  .section3__img__3 {
+    margin-top: 17%;
+  }
+
+  .section3__button {
+    font-size: 1.3rem;
+  }
+
 }

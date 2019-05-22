@@ -7,11 +7,10 @@ class Logout extends Component {
   logout = () => {
     service.logout()
     .then(res => {
-      console.log(res)
       window.localStorage.clear()
       this.props.history.push('/login')
     })
-   .catch(err => console.log(err)) 
+   .catch(err => err)
   }
 
   render () {

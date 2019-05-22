@@ -36,9 +36,7 @@ class Login extends Component {
         toastr.success('Successful login')
         window.localStorage.setItem('loggedUser', JSON.stringify(response.data))
       })
-      .catch(err => {
-        console.log(err)
-      })
+      .catch(err => err)
   }
 
   render() {

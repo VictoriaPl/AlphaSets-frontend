@@ -266,4 +266,12 @@ a {
     font-size: 1.3rem;
   }
 
+  #profile__card {
+    width: 300px !important;
+    margin-left: 8% !important;
+  }
+  .profile__btn {
+    padding: 0% 0% !important;
+    font-size: 14px;
+  }
 }

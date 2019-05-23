@@ -35,7 +35,7 @@ class Profile extends Component {
         </nav>
           <h1 style={{marginLeft: '20%', marginTop: '2%', color: 'rgb(147, 154, 154)'}}>Wellcome to your profile, {user.name}</h1>  
           <div style={{marginLeft: '10%', color: 'white'}}>
-           <div className="card" style={{width: '40%', marginLeft: '25%', marginTop: '3%'}}>
+           <div className="card" id="profile__card" style={{width: '40%', marginLeft: '25%', marginTop: '3%'}}>
             <div className="card-body">
               <div className="row">
                 <h4 style={{color: 'black'}} className="card-title ml-3">{user.company}</h4>

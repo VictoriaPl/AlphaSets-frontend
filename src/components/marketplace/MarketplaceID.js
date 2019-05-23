@@ -45,21 +45,21 @@ class Marketplace extends Component {
         </nav>
         <div className="row">
           <h1 className={styles.marketplaceH1}>MARKETPLACE</h1>  
-          <Link to={`/addData/${id}`} id={styles.marketplaceBtn}>Add data</Link>
+          <Link to={`/addData/${id}`} id={styles.marketplaceBtnID}>Add data</Link>
         </div>
         <div className="row" style={{marginLeft: '18.5%', width: '100%'}}>
           <div className="col-md-4 col-md-offset-3">
             <form action="" className="search-form">
                 <div className="form-group has-feedback">
             		  <label className="sr-only">Search</label>
-            	  	<input type="text" className="form-control" name="search" id="search" placeholder="search" onChange={this.handleInput} value={f}/>
+            	  	<input type="text" className="form-control" name="search" id={styles.searchID} placeholder="search" onChange={this.handleInput} value={f}/>
             	  </div>
             </form>
           </div>
         </div>
         {data.filter(this.search(f)).map((oneData, i) => {
         return(
-          <Link to={`/detail/${oneData._id}`}><div key={i} className="card mb-3 mt-3" style={{maxWidth: '740px', marginLeft: '20%', backgroundColor: 'white'}}>
+          <Link to={`/detail/${oneData._id}`}><div key={i} id={styles.cardMgn} className="card mb-3 mt-3" style={{maxWidth: '740px', marginLeft: '20%', backgroundColor: 'white'}}>
             <div className="row no-gutters">
               <div className="col-md-15">
                 <div id={styles.dataCard} className="card-body"> 

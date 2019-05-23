@@ -27,14 +27,67 @@
   background-color: #FFC857;
 }
 
+#marketplaceBtnID {
+  margin-left: 23%;
+  margin-top: 2.2%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+  color: black; 
+  border: 2px #FFC857 solid;
+  font-size: 20px;
+  padding: 0.5% 1%;
+  border-radius: 2%;
+  background-color: #FFC857;
+}
+
 #dataCard {
   text-decoration: none;
   color: black;
 }
 
+#search {
+  width: 750px;
+}
+
+#searchID {
+  width: 750px;
+}
+
 @media only screen and (max-width: 600px) {
+  .marketplaceH1 {
+    margin-left: 15% !important;
+  }
   .searchbar {
     width: 100px !important; 
+  }
+  #searchID {
+    width: 370px;
+    margin-left: -18% !important;
+  }
+  #marketplaceBtnID {
+    margin-left: 38%;
+    margin-top: 1.2%;
+    margin-bottom: 5%;
+    border-radius: 10%;
+    background-color: #FFC857;
+  }
+  #search {
+    width: 370px;
+    margin-left: -22% !important;
+  }
+  #cardMgn {
+    margin-left: 5% !important;
+    margin-right: 5%;
+  }
+  #detailCard {
+    margin-left: 5% !important;
+    width: 370px;
+  }
+  #paypalBtn {
+    margin-left: -140% !important;
+  }
+  #paypalImg {
+    margin-left: 2% !important;
   }
 }
 

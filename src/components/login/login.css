@@ -12,10 +12,15 @@
     padding-top: 30% !important;
   }
 
+  #signup__logo {
+  margin-left: 10%;
+  }
+
   .form__first__img {
     width: 20% !important;
     margin-bottom: 8% !important;
-    margin-left: 2%;
+    margin-left: 0%;
+    margin-right: 20%;
   }
 
   .form__first__h3 {
@@ -40,7 +45,9 @@
   .signup__col__two {
     width: 80% !important;
   }
-
+  .login__form {
+    padding-bottom:40%;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {

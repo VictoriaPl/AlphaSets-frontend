@@ -59,17 +59,17 @@ class Detail extends Component {
       <div>
           {!(image === undefined)? 
             <div className={styles.marketplace} style={{backgroundColor: '#747272', height: '100vh'}}>
-             <Link to={`/download/${data._id}`}><img src={payment} alt="payment" style={{width: '400px', position: 'absolute', marginLeft: '35%', marginTop: '7%', borderRadius: '1%', boxShadow: '0 0  1em #585858'}} /></Link> 
+             <Link to={`/download/${data._id}`}><img src={payment} id={styles.paypalImg} alt="payment" style={{width: '400px', position: 'absolute', marginLeft: '35%', marginTop: '7%', borderRadius: '1%', boxShadow: '0 0  1em #585858'}} /></Link> 
              </div>
              : <div></div>} 
           {(image === undefined)?
           <div className={styles.marketplace}>
           <div>
           <h1 style={{marginLeft: '20.2%', paddingTop: '2%', color: 'white'}}>DATA DETAIL</h1> 
-            <div key={data._id} className="card mb-3 mt-3" style={{maxWidth: '740px', marginLeft: '20%'}}>
+            <div key={data._id} id={styles.detailCard} className="card mb-3 mt-3" style={{maxWidth: '740px', marginLeft: '20%'}}>
               <div className="row no-gutters">
-                <div className="col-md-15">
-                  <div className="card-body"> 
+                <div className="col-md-15" >
+                  <div className="card-body" > 
                     <h2 className="card-title">{data.name}</h2>
                     <div className="row">
                       <p className="card-text px-2 ml-2"><small className="text-muted">Format:  {data.format}</small></p>
@@ -94,21 +94,21 @@ class Detail extends Component {
               </div>
               </div>
             <div style={{marginLeft: '40%', width: "20%"}}>
-            <img alt="paypalbtn" src={paypalBtn} width="300" onClick={this.payment}/>
+            <img alt="paypalbtn" id={styles.paypalBtn} src={paypalBtn} width="300" onClick={this.payment}/>
+            {/* <PaypalButton 
+             client={CLIENT}
+             env={ENV}
+             commit={true}
+             currency={'USD'}
+             total={data.value}
+             onSuccess={onSuccess}
+             onError={onError}
+             onCancel={onCancel}
+           /> */}
             </div>
           </div>
               : <div></div>
           }
-          {/* <PaypalButton 
-           client={CLIENT}
-           env={ENV}
-           commit={true}
-           currency={'USD'}
-           total={data.value}
-           onSuccess={onSuccess}
-           onError={onError}
-           onCancel={onCancel}
-         /> */}
       </div>
     )
   }
